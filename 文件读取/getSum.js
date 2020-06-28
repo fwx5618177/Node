@@ -7,10 +7,12 @@ let server = http.createServer((req, res) => {
 
 	function list(m){
 		if( m+1 > testfile0.length){
-			if(count == total)
-				return "处理成功";
-			else{
-				return "递归出错";
+			if(count-1 == total){
+				console.log("处理成功")
+				return
+			}else{
+				console.log("递归出错")
+				return
 			}
 		}
 		//console.log('(m + 1) % 2', (m + 1) % 2);
